@@ -32,7 +32,9 @@ app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
 app.engine("html", require("ejs").renderFile);
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(process.env.PORT || port, () =>
+  console.log(`Example app listening on port ${port}!`)
+);
 
 /*
 create database midterm;
