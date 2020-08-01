@@ -6,13 +6,9 @@ const routes = require("./routes/main");
 const port = 8084;
 
 /* DB CONFIG */
-const db = mysql.createConnection({
-  host: "127.0.0.1",
-  port: 3307,
-  user: "root",
-  password: "root",
-  database: "midterm",
-});
+const db = mysql.createConnection(
+  "mysql://be8090f932e064:394ebaaf@us-cdbr-east-02.cleardb.com/heroku_1f15047978c7a93?reconnect=true"
+);
 
 // connect to database
 db.connect((err) => {
