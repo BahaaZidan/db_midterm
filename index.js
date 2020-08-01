@@ -12,7 +12,7 @@ const db = mysql.createPool(
 );
 
 // connect to database
-db.connect((err) => {
+db.getConnection((err, connection) => {
   if (err) {
     throw err;
   }
