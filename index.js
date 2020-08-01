@@ -15,6 +15,20 @@ db.connect((err) => {
   if (err) {
     throw err;
   }
+
+  // if food table doesn't exist, create it
+  db.query("SELECT * FROM food", (err) => {
+    if (err) {
+      db.query(
+        "CREATE TABLE food (id INT AUTO_INCREMENT, name VARCHAR(50), typical_values_per DECIMAL(5, 2) unsigned, typical_values_unit VARCHAR(50), calories VARCHAR(50), carbs VARCHAR(50), fat VARCHAR(50), protein VARCHAR(50), salt VARCHAR(50), sugar VARCHAR(50), PRIMARY KEY(id))",
+        (err, result) => {
+          if (err) {
+            console.error("cannot create table", err);
+          }
+        }
+      );
+    }
+  });
   console.log("Connected to database");
 });
 

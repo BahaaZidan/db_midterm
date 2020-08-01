@@ -42,7 +42,7 @@
         <th>sugar</th>
         <th>&nbsp;</th>
       </tr>
-      <% foodList && foodListforEach(function(food){ %>
+      <% foodList.forEach(function(food){ %>
       <tr>
         <td><%= food.name %></td>
         <td><%= food.typical_values_per %></td>
