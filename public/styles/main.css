@@ -1,0 +1,70 @@
+/* header */
+h1 {
+  text-align: center;
+}
+
+/* tables */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/* forms */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin: 5px;
+  height: 20px;
+}
+
+.button-block {
+  margin: 5px;
+}
+
+/* navigation */
+.navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navigation-item {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.navigation-item a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navigation-item a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4caf50;
+}

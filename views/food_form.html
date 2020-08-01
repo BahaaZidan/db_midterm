@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calorie Buddy</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <h1>Calorie Buddy</h1>
+    <ul class="navigation">
+      <li class="navigation-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="navigation-item right">
+        <a href="/about">About</a>
+      </li>
+      <li class="navigation-item">
+        <a href="/list">All Food</a>
+      </li>
+      <li class="navigation-item">
+        <a href="/search">Find Food</a>
+      </li>
+      <li class="navigation-item <%= url === '/food_added' ? 'active' : '' %>">
+        <a href="/add_food">Add Food</a>
+      </li>
+      <li class="navigation-item <%= url === '/food_added' ? '' : 'active' %>">
+        <a href="/update_food">Modify Food</a>
+      </li>
+    </ul>
+
+    <a href="/list">View all the food</a>
+    <br />
+    <form method="<%= method %>" action="<%= url %>">
+      <input
+        id="first"
+        type="text"
+        name="name"
+        placeholder="name"
+        required
+        value="<%= initialValues.name %>"
+      />
+      <input
+        id="typical_values_per"
+        type="number"
+        name="typical_values_per"
+        placeholder="typical_values_per"
+        required
+        value="<%= initialValues.typical_values_per %>"
+      />
+      <input
+        id="typical_values_unit"
+        type="text"
+        name="typical_values_unit"
+        placeholder="typical_values_unit"
+        required
+        value="<%= initialValues.typical_values_unit %>"
+      />
+      <input
+        id="calories"
+        type="text"
+        name="calories"
+        placeholder="calories"
+        required
+        value="<%= initialValues.calories %>"
+      />
+      <input
+        id="carbs"
+        type="text"
+        name="carbs"
+        placeholder="carbs"
+        required
+        value="<%= initialValues.carbs %>"
+      />
+      <input
+        id="fat"
+        type="text"
+        name="fat"
+        placeholder="fat"
+        required
+        value="<%= initialValues.fat %>"
+      />
+      <input
+        id="protein"
+        type="text"
+        name="protein"
+        placeholder="protein"
+        required
+        value="<%= initialValues.protein %>"
+      />
+      <input
+        id="salt"
+        type="text"
+        name="salt"
+        placeholder="salt"
+        required
+        value="<%= initialValues.salt %>"
+      />
+      <input
+        id="sugar"
+        type="text"
+        name="sugar"
+        placeholder="sugar"
+        required
+        value="<%= initialValues.sugar %>"
+      />
+      <input type="submit" value="OK" class="button-block" />
+    </form>
+  </body>
+</html>
