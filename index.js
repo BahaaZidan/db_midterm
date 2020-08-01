@@ -6,8 +6,9 @@ const routes = require("./routes/main");
 const port = 8084;
 
 /* DB CONFIG */
-const db = mysql.createConnection(
-  "mysql://be8090f932e064:394ebaaf@us-cdbr-east-02.cleardb.com/heroku_1f15047978c7a93?reconnect=true"
+// create a pool instead of a single connection to handle disconnections
+const db = mysql.createPool(
+  "mysql://be8090f932e064:394ebaaf@us-cdbr-east-02.cleardb.com/heroku_1f15047978c7a93?reconnect=true&connectionLimit=5"
 );
 
 // connect to database
